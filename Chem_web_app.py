@@ -3,10 +3,12 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 import streamlit as st
 # Load the trained model
-loaded_model = pickle.load(open('C:/Users/yash/Documents/Deeplearning/practise/Chemp/trained_model.sav', 'rb'))
+# loaded_model = pickle.load(open('C:/Users/yash/Documents/Deeplearning/practise/Chemp/trained_model.sav', 'rb'))
 
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 # Load the StandardScaler used during training
-ss = pickle.load(open('C:/Users/yash/Documents/Deeplearning/practise/Chemp/standard_scaler.sav', 'rb'))
+# ss = pickle.load(open('C:/Users/yash/Documents/Deeplearning/practise/Chemp/standard_scaler.sav', 'rb'))
+ss = pickle.load(open('standard_scaler.sav', 'rb'))
 
 def Pic50Prediction(input_data):
     # Convert the activity to a numerical value if needed
